@@ -1,7 +1,10 @@
 import React from 'react'
+import JuteAndWoodenCraft from './JuteAndWoodenCraft'
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <JuteAndWoodenCraft></JuteAndWoodenCraft>
+    </div>
   )
 }
