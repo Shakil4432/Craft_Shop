@@ -50,7 +50,7 @@ export default function Add_Jute_And_Wooden_Craft_Items() {
   }
 
   return (
-    <div className='mt-20 mx-20 '>
+    <div className='mt-20'>
       <div className='mb-10'>
         <h1 className='text-4xl font-bold text-center'>Add Jute And Wooden Item</h1>
       </div>

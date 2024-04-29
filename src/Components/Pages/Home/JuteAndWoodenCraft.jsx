@@ -11,7 +11,7 @@ export default function JuteAndWoodenCraft() {
     return (
         <div className='mt-16'>
             <h1 className='text-4xl font-bold text-center'>Craft Items</h1>
-            <div className='flex flex-wrap items-center justify-center gap-6 mt-10'>
+            <div className='flex flex-wrap items-center justify-between gap-6 mt-10'>
                 {
                     craftCards.slice(0, 6).map(craftCard => <JuteAndWoodenCraftCard key={craftCard._id} craftCard={craftCard}></JuteAndWoodenCraftCard>)
                 }

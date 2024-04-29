@@ -10,12 +10,14 @@ import PrivateRoute3 from "../PrivateRoutes/PrivateRoute3";
 import CraftDetails from "../Pages/Home/CraftDetails";
 import Allitems from "../Pages/Allitems/Allitems";
 import MyItems from "../PrivateComponent/MyItems";
+import NotFound from "../NotFound/NotFound";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<NotFound></NotFound>,
     children:[
       {
         path:"/",
