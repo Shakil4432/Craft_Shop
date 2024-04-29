@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { TbHttpDelete } from "react-icons/tb";
 
 
-export default function MyCard({ itemCard, handleDelete, handleUpdate }) {
+export default function MyCard({ itemCard, handleDelete}) {
     const { _id, itemName, price, rating, imgURL, stock } = itemCard
 
    
@@ -26,7 +26,7 @@ export default function MyCard({ itemCard, handleDelete, handleUpdate }) {
                         </div>
                         <div className='flex items-center justify-center gap-4'>
                             <div className="card-actions justify-end">
-                                <Link to={`/updateitem/${_id}`} onClick={() => handleUpdate(_id)} className="btn btn-accent  text-white">Update</Link>
+                                <Link to={`/updateitem/${_id}`}  className="btn btn-accent  text-white">Update</Link>
                             </div>
                             <div className="card-actions absolute top-[-5%] right-[-5%] text-red-400 ">
                                 <Link onClick={() => handleDelete(_id)} className="btn btn-error btn-circle text-3xl"><TbHttpDelete></TbHttpDelete></Link>
