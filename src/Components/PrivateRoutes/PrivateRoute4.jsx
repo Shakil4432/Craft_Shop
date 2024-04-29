@@ -3,8 +3,7 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Navigate, useLocation } from 'react-router-dom';
 import { ClipLoader } from 'react-spinners';
 
-export default function PrivateRoute2({children}) {
-    
+export default function PrivateRoute4({children}) {
     const { user,loading } = useContext(AuthContext);
     const location = useLocation();
     if(loading){

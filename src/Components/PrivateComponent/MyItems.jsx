@@ -42,12 +42,17 @@ export default function MyItems() {
 
   }
 
+  const handleUpdate = (id) => {
+    console.log(id)
+}
+
+
   return (
     <div className='mt-16'>
       <h2 className='text-4xl font-bold mb-10 text-center'>My Jute And Wooden Craft Items</h2>
       <div className='flex justify-center items-center gap-6 flex-wrap'>
         {
-          items.map(itemCard => <MyCard key={itemCard._id} handleDelete={handleDelete} itemCard={itemCard}></MyCard>)
+          items.map(itemCard => <MyCard key={itemCard._id} handleDelete={handleDelete} handleUpdate={handleUpdate} itemCard={itemCard}></MyCard>)
         }
       </div>
     </div>
