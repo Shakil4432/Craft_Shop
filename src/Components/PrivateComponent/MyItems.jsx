@@ -11,6 +11,16 @@ export default function MyItems() {
   const allItems = allCards.filter(card => card.email === user.email);
   const [items, setItems] = useState(allItems);
 
+  const handleSort = sortId => {
+    let sortedItems = [...items];
+    if (sortId === 'yes') {
+      sortedItems.sort((a, b) => b.customize.localeCompare(a.customize));
+    } else if (sortId === 'No') {
+      sortedItems.sort((a, b) => a.customize.localeCompare(b.customize));
+    }
+    setItems(sortedItems);
+  };
+  
   const handleDelete = id => {
     Swal.fire({
       title: "Are you sure?",
@@ -42,15 +52,34 @@ export default function MyItems() {
 
   }
 
- 
+
 
 
   return (
     <div className='mt-16'>
       <h2 className='text-4xl font-bold mb-10 text-center'>My Jute And Wooden Craft Items</h2>
+      <select
+        name="subcategoryname"
+        id="brand"
+        className="p-2 mb-5 ml-3 border rounded-md "
+        type="text"
+        placeholder="Select Brand"
+        onClick={(e)=>handleSort(e.target.value)}
+      >
+        <option value="Sort By Customization" disabled>
+          Sort By Customization
+        </option>
+        <option  value="yes" >
+          Yes
+        </option>
+        <option  value="No" >
+         No
+        </option>
+      
+      </select>
       <div className='flex justify-center items-center gap-6 flex-wrap'>
         {
-          items.map(itemCard => <MyCard key={itemCard._id} handleDelete={handleDelete}  itemCard={itemCard}></MyCard>)
+          items.map(itemCard => <MyCard key={itemCard._id} handleDelete={handleDelete} itemCard={itemCard}></MyCard>)
         }
       </div>
     </div>

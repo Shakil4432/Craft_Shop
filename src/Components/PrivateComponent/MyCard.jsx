@@ -4,7 +4,7 @@ import { TbHttpDelete } from "react-icons/tb";
 
 
 export default function MyCard({ itemCard, handleDelete}) {
-    const { _id, itemName, price, rating, imgURL, stock } = itemCard
+    const { _id, itemName, price, rating, imgURL, stock,customize } = itemCard
 
    
 
@@ -17,6 +17,7 @@ export default function MyCard({ itemCard, handleDelete}) {
                     <p><span className='font-bold'>PRICE </span>: {price}TK</p>
                     <p><span className='font-bold'>RATING </span>: {rating}</p>
                     <p><span className='font-bold'>STOCK </span>: {stock}</p>
+                    <p><span className='font-bold'>Customize </span>: {customize}</p>
 
                     <div className='flex justify-between items-center '>
                         <div>
