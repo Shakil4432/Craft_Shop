@@ -32,7 +32,7 @@ export default function UpdateItem() {
         const updateitem = { itemName, price, subCategoryName, rating, imgURL, processTime, customize, stock }
 
 
-        fetch(`http://localhost:5000/JuteAndWoodenCraft/${_id}`, {
+        fetch(`https://jute-and-wooden-craft-server-steel.vercel.app/JuteAndWoodenCraft/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

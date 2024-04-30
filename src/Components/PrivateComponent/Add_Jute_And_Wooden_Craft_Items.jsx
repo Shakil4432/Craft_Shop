@@ -29,7 +29,7 @@ export default function Add_Jute_And_Wooden_Craft_Items() {
     const description = form.description.value;
     const item = { name, email, itemName, price, subCategoryName, rating, imgURL, processTime, customize, stock, description }
 
-    fetch("http://localhost:5000/JuteAndWoodenCraft", {
+    fetch("https://jute-and-wooden-craft-server-steel.vercel.app/JuteAndWoodenCraft", {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

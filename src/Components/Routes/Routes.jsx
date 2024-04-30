@@ -13,6 +13,7 @@ import MyItems from "../PrivateComponent/MyItems";
 import NotFound from "../NotFound/NotFound";
 import PrivateRoute4 from "../PrivateRoutes/PrivateRoute4";
 import UpdateItem from "../PrivateComponent/UpdateItem";
+import CategoryItems from "../CategoryItems/CategoryItems";
 
 
 const router = createBrowserRouter([
@@ -42,29 +43,34 @@ const router = createBrowserRouter([
       {
         path: '/allitems',
         element: <Allitems></Allitems>,
-        loader: () => fetch('http://localhost:5000/JuteAndWoodenCraft'),
+        loader: () => fetch('https://jute-and-wooden-craft-server-steel.vercel.app/JuteAndWoodenCraft'),
       },
       {
         path: '/myitems',
         element: <PrivateRoute3>
           <MyItems></MyItems>
         </PrivateRoute3>,
-        loader: () => fetch('http://localhost:5000/JuteAndWoodenCraft'),
+        loader: () => fetch('https://jute-and-wooden-craft-server-steel.vercel.app/JuteAndWoodenCraft'),
       },
       {
         path: '/updateitem/:id',
         element: <PrivateRoute4>
           <UpdateItem></UpdateItem>
         </PrivateRoute4>,
-        loader: ({ params }) => fetch(`http://localhost:5000/JuteAndWoodenCraft/${params.id}`)
+        loader: ({ params }) => fetch(`https://jute-and-wooden-craft-server-steel.vercel.app/JuteAndWoodenCraft/${params.id}`)
       },
       {
         path: "/viewdetails/:id",
         element: <PrivateRoute2>
           <CraftDetails></CraftDetails>
         </PrivateRoute2>,
-        loader: ({ params }) => fetch(`http://localhost:5000/JuteAndWoodenCraft/${params.id}`)
+        loader: ({ params }) => fetch(`https://jute-and-wooden-craft-server-steel.vercel.app/JuteAndWoodenCraft/${params.id}`)
+      },
+      {
+        path:'/categoriesitem',
+        element:<CategoryItems></CategoryItems>
       }
+      
     ]
 
   },

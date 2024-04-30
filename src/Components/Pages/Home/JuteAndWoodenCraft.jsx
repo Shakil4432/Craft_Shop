@@ -4,7 +4,7 @@ import JuteAndWoodenCraftCard from './JuteAndWoodenCraftCard';
 export default function JuteAndWoodenCraft() {
     const [craftCards, setCraftCards] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/JuteAndWoodenCraft')
+        fetch('https://jute-and-wooden-craft-server-steel.vercel.app/JuteAndWoodenCraft')
             .then(res => res.json())
             .then(data => setCraftCards(data))
     }, [])

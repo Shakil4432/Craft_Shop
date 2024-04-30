@@ -14,7 +14,7 @@ export default function JuteAndWoodenCraftCard({ craftCard }) {
                     <p><span className='font-bold'>RATING </span>: {rating}</p>
                     <p><span className='font-bold'>STOCK </span>: {stock}</p>
                     <div className="card-actions justify-end">
-                        <Link to={`/viewdetails/${_id}`} className="btn btn-primary">View Details</Link>
+                        <Link to={`/viewdetails/${_id}`} className="btn btn-success text-white">View Details</Link>
                     </div>
                 </div>
             </div>
