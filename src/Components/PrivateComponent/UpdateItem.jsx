@@ -14,7 +14,7 @@ import { useLoaderData } from 'react-router-dom';
 export default function UpdateItem() {
     const { user } = useContext(AuthContext);
     const item = useLoaderData();
-   
+
     const { _id, itemName, price, subCategoryName, rating, imgURL, processTime, customize, stock } = item;
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -73,10 +73,32 @@ export default function UpdateItem() {
                     </div>
                     <div className='space-y-4'>
 
-                        <label className="input input-bordered flex items-center gap-2">
-                            <BiSolidCategory></BiSolidCategory>
-                            <input type="text" className="grow" placeholder="SubcategoryName" name="subcategoryname" defaultValue={subCategoryName} />
-                        </label>
+                        <select
+                            name="subcategoryname"
+                            id="brand"
+                            className="w-full p-2 border rounded-md "
+                            type="text"
+                            placeholder="Select Brand"
+                        >
+                            <option value="Wooden Furniture & Sculptures" selected>
+                                Wooden Furniture & Sculptures
+                            </option>
+                            <option value="Wooden Home Decor" selected>
+                                Wooden Home Decor
+                            </option>
+                            <option value="Wooden Utensils and Kitchenware" selected>
+                                Wooden Utensils and Kitchenware
+                            </option>
+                            <option value="Jute Home Decor" selected>
+                                Jute Home Decor
+                            </option>
+                            <option value="Jute Kitchenware & utensils" selected>
+                                Jute Kitchenware & utensils
+                            </option>
+                            <option value="Jute and wooden jewellery" selected>
+                                Jute and wooden jewellery
+                            </option>
+                        </select>
                         <label className="input input-bordered flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path fillRule="evenodd" d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clipRule="evenodd" /></svg>
                             <input type="text" className="grow" placeholder="Rating" name="rating" defaultValue={rating} />
