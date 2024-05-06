@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { CiTempHigh } from "react-icons/ci";
-import { BiSolidCategory } from "react-icons/bi";
 import { IoIosPricetag } from "react-icons/io";
 import { CiLink } from "react-icons/ci";
 import { BiCustomize } from "react-icons/bi";

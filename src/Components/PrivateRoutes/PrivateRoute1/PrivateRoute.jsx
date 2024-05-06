@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import {  ClipLoader, PropagateLoader } from 'react-spinners';
+import {  ClipLoader } from 'react-spinners';
 
 
 export default function PrivateRoute({children}) {
@@ -21,14 +21,9 @@ export default function PrivateRoute({children}) {
       />
         </h1>
     }
-    if(!user){
-        return <Navigate to="/login" state={location?.pathname || '/'}></Navigate>
+    if(user){
+        return children
     }
-    else{
-        return (
-            <div>
-                {children}
-            </div>
-        )
-    }
+   
+    return <Navigate to="/login" state={location?.pathname || '/'} replace></Navigate>
 }
